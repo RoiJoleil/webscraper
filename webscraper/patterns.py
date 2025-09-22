@@ -1,5 +1,6 @@
 import re
 
+
 # ============= EMAIL =============
 email_regex = r'''
     ([a-zA-Z0-9._-]+)                  # local part
@@ -10,12 +11,14 @@ email_regex = r'''
 '''
 email_pattern = re.compile(email_regex, re.VERBOSE)
 
+
 # ============= TELEHPONE =============
 telephone_regex = r'''
     (?=[+0-9]) # must start with + or digit
     [0-9\+\/\-\(\)\[\]\{\} \t]+ # number
 '''
 telehpone_pattern = re.compile(telephone_regex, re.VERBOSE)
+
 
 # ============= CONTACT =============
 suchwort = [
@@ -42,3 +45,5 @@ contact_regex = rf'''
     ([A-ZÄÖÜ][a-zäöüß]*\.?)   # Nachname
 '''
 contact_pattern = re.compile(contact_regex, re.VERBOSE)
+
+
