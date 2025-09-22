@@ -6,7 +6,7 @@ At this state, it only has a few simple methods to find the email address, phone
 
 ## Versions
 ### 0.1.0
-Added submodule 'find'
-Added method to find emails.
-Added method to find phone numbers.
-Added method to find contacts.
+- Added submodule 'find'
+- Added method to find emails.
+- Added method to find phone numbers.
+- Added method to find contacts.
