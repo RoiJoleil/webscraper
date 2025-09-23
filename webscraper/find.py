@@ -1,8 +1,10 @@
-import re
+import spacy
 from typing import Union, overload
 from webscraper.patterns import email_pattern as _email_pattern
 from webscraper.patterns import telehpone_pattern as _telehpone_pattern
 from webscraper.patterns import contact_pattern as _contact_pattern
+
+NLP = spacy.load("de_core_news_sm")
 
 
 # ============= EMAIL =============
@@ -80,10 +82,10 @@ def contact(text: Union[str, list[str]]) -> set[tuple[str, str, str]]:
     
     result = set()
     for t in text:
-        contacts = _contact_pattern.findall(t)
-        for c in contacts:
-            result.add(c)
-
+        doc = NLP(t)
+        for ent in doc.ents:
+            if ent.label_ == "PER":
+                result.add(ent.text)
     return result
 
 
