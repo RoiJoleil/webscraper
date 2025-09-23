@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='webscraper',
-    version='0.1.0',
+    version='0.2.0',
     author='Joel Gyhra',
     description='A helper to scraping the web and beyond.',
     long_description=open('README.md', encoding='utf-8').read(),
