@@ -1,4 +1,6 @@
 import spacy
+import spacy.cli
+spacy.cli.download("de_core_news_sm")
 from typing import Union, overload
 from webscraper.patterns import email_pattern as _email_pattern
 from webscraper.patterns import telehpone_pattern as _telehpone_pattern
