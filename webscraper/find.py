@@ -2,7 +2,6 @@ import spacy
 from typing import Union, overload
 from webscraper.patterns import email_pattern as _email_pattern
 from webscraper.patterns import telehpone_pattern as _telehpone_pattern
-from webscraper.patterns import contact_pattern as _contact_pattern
 
 NLP = spacy.load("de_core_news_sm")
 
