@@ -15,5 +15,7 @@ setup(
     ],
     python_requires='>=3.7',
     install_requires=[
+        "spacy",
+        "https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-3.6.0/de_core_news_sm-3.6.0-py3-none-any.whl"
     ]
 )
